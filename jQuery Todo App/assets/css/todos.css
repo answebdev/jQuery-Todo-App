@@ -1,0 +1,103 @@
+body {
+	font-family: Roboto;
+	background: #108dc7;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ef8e38, #108dc7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ef8e38, #108dc7); /* W3C, IE 10+/ Edge, Firefox 16+,
+																Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+	background: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;;
+	font-size: 24px;
+	/*an h1 by default is bolded, so:*/
+	font-weight: normal;
+}
+
+span {
+	background: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+ul {
+	/*get rid of the bullet points )verride,
+	which are the default:*/
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+/*styling the fontawesome icon (notice from the HTML page that
+font awesome icons are classes, therefore:*/
+.fa-plus {
+	float: right;
+}
+
+li:nth-child(2n) {
+	background: #f7f7f7;
+}
+
+li:hover span {
+	width: 40px;
+	opacity: 1.0;
+}
+
+input {
+	font-size: 18px;
+	color: #2980b9;
+	background-color: #f7f7f7;
+/*	add width of 100% so that the input button
+	goes all the way across the container:*/
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+}
+
+/*for the effect called "focusing".
+w/o this we get the default focus effect.
+there's a selector for this (just like
+the hover pseudo-selector, these styles
+will only run when we have focused
+on an input). the background will be
+white (#fff) when we focus on it, as well
+as a border:*/*/
+input:focus {
+	background: #fff;
+	border: 3px solid #2980b9;
+/*	"outline" is the outline we get
+	from the browser:*/
+	outline: none;
+}
+
+#container {
+	width: 360px;
+	/*to center: auto*/
+	margin: 100px auto;
+	background: #f7f7f7;
+	/*instead of a border, the container
+	has a box-shadow:*/
+	box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+}
+
+.completed {
+	color: gray;
+	text-decoration: line-through;
+}
